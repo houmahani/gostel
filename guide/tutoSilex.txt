@@ -1,0 +1,10 @@
+Petit Tuto sur l'installation de Silex et de Twig
+https://docs.google.com/document/d/11BjpXYJhxCdMurD0wjXRTOcEz-aLHhwJG0yhokGmtdM/edit#
+
+
+Pour la maison si vous souhaitez installer composer : 
+https://docs.google.com/document/d/1ScGl_UGYo7cNjqitt-FypDZmusYTpnZxovCi1y39UGY/edit#
+
+
+
+Un exemple de structure avec Silex : https://github.com/Cyrhades/base_silex_twig
