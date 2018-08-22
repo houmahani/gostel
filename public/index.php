@@ -28,8 +28,8 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'password' => 'troiswa',
         'charset' => 'UTF8'    
         ),
-    ),
-));
+    )
+);
 
 // Asset
 $app->register(new Silex\Provider\AssetServiceProvider(), array(
