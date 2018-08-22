@@ -4,7 +4,8 @@
         "twig/twig": "^2.5",
 				"symfony/twig-bridge" : "^3.4",
         "doctrine/dbal": "^2.5",
-        "symfony/asset": "^3.4"
+        "symfony/asset": "^3.4",
+        "symfony/var-dumper": "^3.4"
     },
     "autoload": {
     	"psr-4": {

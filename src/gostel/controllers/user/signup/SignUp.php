@@ -1,24 +1,23 @@
-<?php
-
-namespace Gostel\controllers\user\login;
+<?php 
+namespace Gostel\controllers;
 
 use Symfony\Component\HttpFoundation\Request;
 use Silex\Application;
 
 
-class Login {
+class SignUp {
 
 	public function showForm() {
 		return $app['twig']->render('signup.twig');
 	}
 
-	public function submitForm(Request $request, App, $app) {
-
+	public function submitForm(Request $request, Application $app) {
+		
 		return $app['twig']->render(
 			'signup.twig',
 			[
 				'firstname' => $request->get('firstname'),
-				'lastname' => $request->get('lastname'),
+				'lastname' => $request->get('lastname')
 			]
 		);
 	}

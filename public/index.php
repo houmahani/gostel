@@ -26,7 +26,9 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'dbname' => 'gostel',
         'user' => 'root',
         'password' => 'troiswa',
-        'charset' => 'UTF8'    ),
+        'charset' => 'UTF8'    
+        ),
+    ),
 ));
 
 // Asset

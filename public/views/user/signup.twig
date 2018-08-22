@@ -1,0 +1,98 @@
+{% extends 'layout.twig' %}
+{% block body %}
+
+<h1>Création de compte</h1>
+<form action="" method="post">
+
+	<!-- Identité -->
+	<fieldset>
+		<legend>Identité</legend>
+		<ul>
+			<!-- Genre -->
+			<li>
+				<label for="genre">Genre :</label><br>
+				<input type="radio" name="genre" value="f" id="female" required>
+				<label for="genre">F</label>
+				
+				<input type="radio" name="genre" value="m" id="male" required>
+				<label for="genre">M</label>
+			</li>
+			
+			<!-- Prénom -->
+			<li>
+				<label for="firstname">Prénom :</label>
+				<input type="text" name="firstname" id="firstname" required>
+			</li>
+			
+			<!-- Nom -->
+			<li>
+				<label for="lastname">Nom :</label>
+				<input type="text" name="lastname" id="lastname" required>
+			</li>
+			
+			<!-- Date de naissance -->
+			<li>
+				<label for="birthdate">Date de naissance:</label>
+				<input type="date" name="birthdate" id="birthdate" required>
+			</li>
+		</ul>
+	</fieldset>
+	
+	<!-- Identifiants -->
+	<fieldset>
+		<legend>Identifiants</legend>
+		<ul>
+			<!-- Email -->
+			<li>
+				<label for="email">Email :</label>
+				<input type="email" name="email" id="email" required>
+			</li>
+			
+			<!-- Password -->
+			<li>
+				<label for="password">Mot de passe :</label>
+				<input type="password" name="password" id="password" required>
+			</li>
+		</ul>
+	</fieldset>
+	
+	<!-- Coordonnées -->
+	<fieldset>
+		<legend>Coordonnées</legend>
+		<ul>
+			<!-- Phone -->
+			<li>
+				<label for="phone">Phone</label>
+				<input type="tel" name="phone" id="phone" required>
+			</li>
+			
+			<!-- Adresse -->
+			<li>
+				<label for="address">Adresse</label>
+				<input type="text" name="address" id="address" required>
+			</li>
+			
+			<!-- Code Postal -->
+			<li>
+				<label for="zipcode">Code Postal</label>
+				<input type="number" name="zipcode" id="zipcode" required>
+			</li>
+			
+			<!-- Ville -->
+			<li>
+				<label for="city">Ville</label>
+				<input type="text" name="city" id="city" required>
+			</li>
+			
+			<!-- 	Pays -->
+			<li>
+				<label for="country">Pays</label>
+				<input type="text" name="country" id="country" required>
+			</li>
+		</ul>
+	</fieldset>
+		<ul>
+			<li><input type="submit" name="submit" value="Envoyer" id="submit"></li>
+		</ul>
+</form>
+{% endblock %}
