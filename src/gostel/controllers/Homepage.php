@@ -3,11 +3,16 @@
 namespace Gostel\controllers;
 
 use Silex\Application;
+use Gostel\models\HotelModel;
 
 class Homepage {
 
 	public function showPage(Application $app) {
-		
-		return $app['twig']->render('home.twig');
+		$olistHotel = new HotelModel();
+		$list = $olistHotel->getlistHotel($app);
+
+		return $app['twig']->render('home.twig', array('hotels'=> $list));
 	}
+
+
 }
