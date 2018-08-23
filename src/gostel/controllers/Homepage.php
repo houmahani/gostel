@@ -19,9 +19,6 @@ class Homepage {
 			$list = $olistHotel->getSearchHotel($app,$search);
 		}
 		
-
-		$list = $olistHotel->getlistHotel($app);
-
 		return $app['twig']->render('home.twig', array('hotels'=> $list));
 	}
 
