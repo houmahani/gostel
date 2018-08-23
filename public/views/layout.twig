@@ -23,8 +23,9 @@
 		<nav>
 			<ul class="flex">
 				<li><a href="{{ url('home') }}">Page d'accueil</a></li>
-				<li><a href="#">Créer un compte</a></li>
-				<li><a href="#">Connexion</a></li>
+				
+				<li><a href="{{ url('signup') }}">Créer un compte</a></li>
+				<li><a href="{{ url('login') }}">Connexion</a></li>
 				<li><a href="#">Admin</a></li>
 				<li><a href="{{ url('contact') }}">Contact</a></li>
 			</ul>
@@ -32,13 +33,13 @@
 		
 		<!-- Logo et slogan -->
 		<div class="center">
-			<h1>Gostel</h1>
+			<a href="{{ url('home') }}"><h1>Gostel</h1></a>
 			<p>Réservez dans les meilleurs hôtels</p>
 			
 			<!-- Bouton rechercher -->
-			<form action="">
+			<form action="" method="get">
 				<input type="search" id="search" name="search" placeholder="Pays, Ville">
-				<button id="btn_search">Rechercher</button>
+				<button type="submit" id="btn_search">Rechercher</button>
 			</form>
 		
 		</div>
@@ -48,3 +49,6 @@
 	{% block body %}{% endblock %}
 </body>
 </html>
+
+
+

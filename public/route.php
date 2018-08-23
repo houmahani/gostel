@@ -20,7 +20,13 @@ $app->get('/contact', 'Gostel\controllers\Contact::showForm')
 $app->post('/contact', 'Gostel\controllers\Contact::submitForm'); 
 
 // Sign Up
-$app->get('/signup', 'Gostel\controllers\SignUp::showForm')
+$app->get('/signup', 'Gostel\controllers\user\signup\SignUp::showForm')
 ->bind('signup');
 
-$app->post('/signup', 'Gostel\controllers\SignUp::submitForm'); 
+$app->post('/signup', 'Gostel\controllers\user\signup\SignUp::submitForm'); 
+
+// Login
+$app->get('/login', 'Gostel\controllers\user\login\Login::showForm')
+->bind('login');
+
+$app->post('/login', 'Gostel\controllers\user\login\Login::submitForm'); 

@@ -1,0 +1,30 @@
+{% extends 'layout.twig' %}
+{% block body %}
+
+<h1>Connection</h1>
+<form action="" method="post">
+	<fieldset>
+		<legend>Se connecter</legend>
+		<ul>
+		
+			<!-- Email -->
+			<li>
+				<label for="email">Email :</label>
+				<input type="email" name="email" id="email" required>
+			</li>
+			
+			<!-- Mot de passe -->
+			<li>
+				<label for="password">Mot de passe :</label>
+				<input type="password" name="password" id="password" required>
+			</li>
+		
+			<!-- Submit -->
+			<li>
+				<input type="submit" name="submit" value="Envoyer" id="submit">
+			</li>
+		</ul>
+	</fieldset>
+</form>
+
+{% endblock %}

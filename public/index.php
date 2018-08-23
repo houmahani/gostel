@@ -41,8 +41,12 @@ $app->register(new Silex\Provider\AssetServiceProvider(), array(
     ),
 ));
 
+// Session 
+$app->register(new Silex\Provider\SessionServiceProvider());
+
 // inclusion des routes
 include 'route.php';
 
 
 $app->run(); // INDISPENSABLE permet de démarrer “l’application”
+
