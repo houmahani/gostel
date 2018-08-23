@@ -13,7 +13,7 @@
 	<!-- Feuilles de style -->
 	{% block stylesheets %}
 	<!--	<link rel="stylesheet" href="{{ asset('css/normalize.css') }}">-->
-		<link rel="stylesheet" href="{{ asset('views/css/style.css') }}">
+		<link rel="stylesheet" href="{{ asset('style.css', 'css') }}">
 	{% endblock %}
 </head>
 <body>
@@ -22,8 +22,7 @@
 		<!-- Navigation -->
 		<nav>
 			<ul class="flex">
-				<li><a href="{{ url('home') }}">Page d'accueil</a></li>
-				
+
 				<li><a href="{{ url('signup') }}">Créer un compte</a></li>
 				<li><a href="{{ url('login') }}">Connexion</a></li>
 				<li><a href="#">Admin</a></li>
@@ -33,17 +32,22 @@
 		
 		<!-- Logo et slogan -->
 		<div class="center">
-			<a href="{{ url('home') }}"><h1>Gostel</h1></a>
+
+
+			<h1><a href="{{ url('home') }}">Gostel</a></h1>
+
 			<p>Réservez dans les meilleurs hôtels</p>
 			
 			<!-- Bouton rechercher -->
 			<form action="" method="get">
 				<input type="search" id="search" name="search" placeholder="Pays, Ville">
-				<button type="submit" id="btn_search">Rechercher</button>
+
+				<button class="btn btn_search" type="submit" id="btn_search">Rechercher</button>
+
+
 			</form>
 		
 		</div>
-		
 	</header>
 	
 	{% block body %}{% endblock %}

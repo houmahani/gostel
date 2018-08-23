@@ -11,13 +11,16 @@ class Homepage {
 	public function showPage(Application $app, Request $request) {
 
 		$olistHotel = new HotelModel();
+
 		$search =  $request->get('search','');
 		if(empty($search)) {
 			$list = $olistHotel->getlistHotel($app);
 		} else {
 			$list = $olistHotel->getSearchHotel($app,$search);
 		}
-		//var_dump($list);
+		
+
+		$list = $olistHotel->getlistHotel($app);
 
 		return $app['twig']->render('home.twig', array('hotels'=> $list));
 	}

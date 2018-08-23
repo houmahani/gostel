@@ -3,19 +3,35 @@
 
 {% block body %}
 
-<h1> Bienvenue sur la page d'accueil</h1>
 
-	{% for ligne in hotels %}
-	 <ul>
-			<li><h3>{{ ligne.Name }}</h3></li>
-			<li><strong> Tél :</strong> {{ ligne.Phone }}</li>
-			<li><strong> Adresse :</strong> {{ ligne.Address }}</li>
-			<li><strong> Ville :</strong> {{ ligne.City }}</li>
-			<li><strong>Pays : </strong>{{ ligne.Country }}</li>
-			<li><strong>Nombre de Chambre :</strong> <br>{{ ligne.Nb_Rooms }}</li>
+	<main>
+		{% for message in app.session.flashbag.get('notice') %}
+			<p class="notice">{{ message }}</p>
+		{% endfor %}
+
+		<h2>Nos hôtels</h2>
+
+			{% for ligne in hotels %}
 			
+			<article class="flex">
+				<div class="contact_info">
+					<h3>{{ ligne.Name }}</h3>
+					<p><strong>Addresse :</strong> {{ ligne.Address }}</p>
+					<p><strong>Tél :</strong> {{ ligne.Phone }}</p>
+					<p><strong>Ville :</strong> {{ ligne.City }}</p>
+					<p><strong>Pays :</strong> {{ ligne.Country }}</p>
+				</div>
+				
+				<div class="rooms">
+					<div class="rooms_content">
+						<p><strong>Chambres disponibles</strong></p>
+						<span class="nb_rooms">{{ ligne.Nb_Rooms }}
+						</span>
+					</div>
+				</div>
+				
+			</article>
+		{% endfor %}
+	</main>
 
-		</ul>
-	{% endfor %}
-	
 {% endblock %}

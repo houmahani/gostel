@@ -13,4 +13,15 @@ class UserModel {
 		
 	}
 	
+	public function signIn(Application $app, $sEmail) {
+		
+
+		$sql = 'SELECT `FirstName`, `LastName`, `Password`, `Email` 
+		FROM `User`
+		WHERE `Email` = ?';
+		
+		return $app['db']->fetchAssoc($sql, [$sEmail]);
+			
+	}
+	
 }
