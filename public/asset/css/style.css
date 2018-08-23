@@ -53,9 +53,6 @@ form li, fieldset {
 header {
 	position: relative;
 	padding: 20px;
-	background: linear-gradient(rgba(0, 0, 5, 0.5), rgba(89, 106, 114, 0.5)),
-		url('../images/hotel-perrakis.jpg');
-	background-size: cover;
 	height: 70vh;
 	color: white;
 	
@@ -176,8 +173,6 @@ article div:nth-child(2) {
 	font-weight: bold;
 }
 
-
-
 article h3 {
 	text-transform: uppercase;
 	padding: 20px;
@@ -202,3 +197,73 @@ article p  {
 	}
 }
 
+/* Slider */
+/* Conteneur aux dimensions d'une seule image */
+.one_container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Conteneur aux dimensions de la concaténation des 4 images */
+.all_container {
+  width: 7680px;
+  font-size: 0;
+  transition: 3s ease;
+  height: 70vh;
+}
+
+.picture_slider {
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+
+.slide {
+    animation: slideAnimation 30s ease infinite;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+
+  12.5% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  37.5% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  62.5% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-75%);
+  }
+
+  87.5% {
+    transform: translateX(-75%);
+  }
+
+  99% {
+    transform: translateX(-75%);
+  }
+
+  99.99% {
+      transform: translateX(-75%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

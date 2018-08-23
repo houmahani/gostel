@@ -30,9 +30,19 @@
 			</ul>
 		</nav>
 		
+		<!-- Slider -->
+		<section class="one_container">
+   			<div class="all_container slide"> 
+    		{% for file in files %}
+                
+               <img src="{{ asset( file ,'slider') }}" class="picture_slider" />
+                    
+    	 	{% endfor %}
+    	 	</div>
+		</section>
+		
 		<!-- Logo et slogan -->
 		<div class="center">
-
 
 			<h1><a href="{{ url('home') }}">Gostel</a></h1>
 

@@ -18,9 +18,24 @@ class Homepage {
 		} else {
 			$list = $olistHotel->getSearchHotel($app,$search);
 		}
+		
+		/* Slider */
+	$aFiles = [];
+	$aImages = glob("../public/asset/images/header/*.{jpg,png,gif}", GLOB_BRACE);
 
-		return $app['twig']->render('home.twig', array('hotels'=> $list));
+		foreach($aImages as $sPathImage) {
+			$aFiles[] = pathinfo($sPathImage, PATHINFO_BASENAME);
+		}
+
+		return $app['twig']->render(
+			'home.twig',
+			[
+			'files' => $aFiles,
+			'hotels'=> $list
+			]
+		);
+
 	}
-
+	
 
 }
