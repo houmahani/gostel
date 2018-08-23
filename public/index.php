@@ -28,16 +28,15 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'password' => 'troiswa',
         'charset' => 'UTF8'    
         ),
-    ),
-));
+    )
+);
 
 // Asset
 $app->register(new Silex\Provider\AssetServiceProvider(), array(
-    'assets.version' => 'v1',
-    'assets.version_format' => '%s?version=%s',
     'assets.named_packages' => array(
-        'css' => array('version' => 'css2', 'base_path' => '/whatever-makes-sense'),
-        'images' => array('base_urls' => array('https://img.example.com')),
+        'css' => array('base_path' => 'asset/css/'),
+        'images' => array('base_path' => 'asset/images/'),
+				'js' => array('base_path' => 'asset/js/'),
     ),
 ));
 

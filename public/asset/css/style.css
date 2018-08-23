@@ -1,0 +1,204 @@
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Classe Flex */
+.flex {
+	display: flex;
+}
+
+/* Tous les li n'ont pas de puces */
+li {
+	list-style-type: none;
+}
+
+/* Tous les liens n'ont pas de décoration */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a, button, #submit {
+	cursor: pointer;
+}
+
+flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Tous les formulaires */
+label {
+	display: inline-block;
+	width: 200px;
+	text-align: left;
+}
+
+form li, fieldset {
+	margin: 20px;
+}
+
+
+/* HEADER */
+
+header {
+	position: relative;
+	padding: 20px;
+	background: linear-gradient(rgba(0, 0, 5, 0.5), rgba(89, 106, 114, 0.5)),
+		url('../images/hotel-perrakis.jpg');
+	background-size: cover;
+	height: 70vh;
+	color: white;
+	
+}
+
+header nav {
+	width: auto;
+}
+
+/* Formulaire dans l'en tête */
+header form {
+	width: 100%;
+	margin: 80px auto;
+}
+
+/* Barre et bouton rechercher ont un padding de 20px de hauteur et 10px de largeur et aucune bordure*/
+header input, .btn {
+	border: none;
+	padding: 20px;
+}
+
+/* Barre rechercher */
+header input {
+	width: 80%;
+}
+
+/* Bouton rechercher en page d'accueil */
+.btn {
+	background-color: #fca311;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav ul {
+	width: 42%;
+}
+
+nav li {
+	padding: 20px;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+/* Le titre, le slogan et la barre de recherche centré */
+.center{
+	width: 100%;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Merienda', cursive;
+	font-size: 60px;
+	margin: 50px;
+}
+
+h2 {
+	text-transform: uppercase;
+	margin: 70px;
+}
+
+main {
+	width: 80%;
+	margin: 50px auto;
+	text-align: center;
+}
+
+/* Message de bienvenue après connexion */
+.notice {
+	font-size: 20px;
+	margin: 80px;
+	padding: 70px;
+	border: 1px dashed #fca311;
+	
+}
+
+
+/* Liste des hotels */
+article {
+	width: 100%;
+	margin: 30px;
+	border-radius: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+article div:first-child {
+	width: 70%;
+}
+
+article div:nth-child(2) {
+	width: 30%;
+	border-radius: 0 20px 20px 0;
+	background-color: #fca311;
+}
+
+.rooms_content {
+	width: 80%;
+	margin: 80px auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+.rooms_content:hover {
+	animation-name: rooms;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+.nb_rooms {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+
+
+article h3 {
+	text-transform: uppercase;
+	padding: 20px;
+	border-bottom: 1px dashed #fca311;
+}
+
+article p  {
+	text-align: left;
+}
+
+@keyframes rooms {
+	0% {
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 0.7;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
